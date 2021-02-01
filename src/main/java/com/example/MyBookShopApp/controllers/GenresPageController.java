@@ -16,4 +16,9 @@ public class GenresPageController {
     public String mainPage(Model model) {
         return "redirect:/bookshop/main";
     }
+
+    @GetMapping("/authors/index.html")
+    public String authorsPage() {
+        return "authors/index";
+    }
 }
