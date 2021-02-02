@@ -1,11 +1,10 @@
 package com.example.MyBookShopApp.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class GenresPageController {
+public class OtherPagesController {
 
     @GetMapping("/genres/index.html")
     public String genresPage() {
@@ -13,7 +12,7 @@ public class GenresPageController {
     }
 
     @GetMapping("/index.html")
-    public String mainPage(Model model) {
+    public String mainPage() {
         return "redirect:/bookshop/main";
     }
 
