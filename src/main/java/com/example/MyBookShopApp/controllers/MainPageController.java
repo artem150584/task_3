@@ -27,6 +27,7 @@ public class MainPageController {
         model.addAttribute("searchPlaceholder", "new search placeholder");
         model.addAttribute("serverTime", new SimpleDateFormat("hh:mm:ss").format(new Date()));
         model.addAttribute("placeholderTextPart2", "SERVER");
+        model.addAttribute("messageTemplate", "searchbar.placeholder");
         return "index";
     }
 }
