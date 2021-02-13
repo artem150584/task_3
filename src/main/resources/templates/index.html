@@ -120,9 +120,9 @@
                 <div class="Slider-content">
                   <div class="Card"><a class="Card-picture" href="/books/slug.html"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
                     <div class="Card-content">
-                      <strong class="Card-title"><a href="#" th:text="${book.title}"></a>
+                      <strong class="Card-title"><a href="#" th:text="${book.title.toUpperCase()}"></a>
                       </strong>
-                      <div class="Card-description" th:text="${book.author}">
+                      <div class="Card-description" th:text="${book.author.toUpperCase()}">
                       </div>
                       <div class="Card-cost"><span class="Card-priceOld" th:text="${book.priceOld}"></span><span
                               class="Card-price" th:text="${book.price}"></span>
