@@ -16,10 +16,10 @@ public class AuthorPagesController {
         this.authorService = authorService;
     }
 
-    @GetMapping("/index.html")
-    public String mainPage() {
-        return "redirect:/bookshop/main";
-    }
+//    @GetMapping("/index.html")
+//    public String mainPage() {
+//        return "redirect:/bookshop/main";
+//    }
 
     @GetMapping("/authors/index.html")
     public String authorsPage(Model model) {
