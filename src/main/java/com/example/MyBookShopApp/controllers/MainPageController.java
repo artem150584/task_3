@@ -25,7 +25,7 @@ public class MainPageController {
     public String mainPage(Model model) {
         model.addAttribute("bookData", bookService.getBookData());
         model.addAttribute("searchPlaceholder", "new search placeholder");
-        model.addAttribute("serverTime", new SimpleDateFormat("hh:mm:ss").format(new Date()));
+        model.addAttribute("serverTime", new Date());
         model.addAttribute("placeholderTextPart2", "SERVER");
         model.addAttribute("messageTemplate", "searchbar.placeholder2");
         return "index";
