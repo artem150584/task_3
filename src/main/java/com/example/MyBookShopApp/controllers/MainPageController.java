@@ -26,7 +26,7 @@ public class MainPageController {
         return bookService.getBookData();
     }
 
-    @GetMapping("/main")
+    @GetMapping("/")
     public String mainPage(Model model) {
         return "index";
     }
