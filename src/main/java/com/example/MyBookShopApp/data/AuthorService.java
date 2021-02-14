@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Service
 public class AuthorService {
@@ -18,15 +20,19 @@ public class AuthorService {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public List<Author> getAuthorData() {
-        List<Author> authors = jdbcTemplate.query("SELECT * FROM authors ORDER BY name", (ResultSet rs, int rowNum) -> {
+    public Map<String, List<Author>> getAuthorsMap() {
+
+        List<Author> authors = jdbcTemplate.query("SELECT * FROM authors", (ResultSet rs, int rowNum) -> {
             Author author = new Author();
-            author.setId(rs.getInt("author_id"));
-            author.setName(rs.getString("name"));
+            author.setId(rs.getInt("id"));
+            author.setFirstName(rs.getString("first_name"));
+            author.setLastName(rs.getString("last_name"));
 
             return author;
         });
 
-        return new ArrayList<>(authors);
+        return authors.stream().collect(Collectors.groupingBy((Author a) -> {
+            return a.getLastName().substring(0, 1);
+        }));
     }
 }
