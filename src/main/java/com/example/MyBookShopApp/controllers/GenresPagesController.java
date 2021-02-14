@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class GenresPagesController {
 
-    @GetMapping("/genres/index.html")
-    public String genresPage() {
-        return "genres/index";
-    }
+//    @GetMapping("/genres/index.html")
+//    public String genresPage() {
+//        return "genres/index";
+//    }
 }

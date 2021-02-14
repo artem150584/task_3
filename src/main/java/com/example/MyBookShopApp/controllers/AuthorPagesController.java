@@ -21,9 +21,9 @@ public class AuthorPagesController {
 //        return "redirect:/bookshop/main";
 //    }
 
-    @GetMapping("/authors/index.html")
-    public String authorsPage(Model model) {
-        model.addAttribute("authorData", authorService.getAuthorData());
-        return "authors/index";
-    }
+//    @GetMapping("/authors/index.html")
+//    public String authorsPage(Model model) {
+//        model.addAttribute("authorData", authorService.getAuthorData());
+//        return "authors/index";
+//    }
 }
