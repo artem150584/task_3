@@ -12,7 +12,7 @@
 <!--[if gt IE 9]><!-->
 <html lang="ru" xmlns:th="http://www.thymeleaf.org"> <!--<![endif]-->
 <head>
-  <title>Тут название страницы написать</title>
+  <title>Корзина</title>
   <meta name="description" content="Описание страницы">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="/assets/css/extra.min.css?v=22193648"><!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script defer src="/assets/js/scripts.min.js?v=22193648"></script>
+  <header th:replace="~{fragments/head_fragment :: langScriptFragment}"></header>
 </head>
 <body class="Site">
   <!--if lt IE 8
