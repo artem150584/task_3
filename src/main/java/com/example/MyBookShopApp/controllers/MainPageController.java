@@ -28,6 +28,7 @@ public class MainPageController {
 
     @GetMapping("/")
     public String mainPage(Model model) {
+        model.addAttribute("mainActive", "true");
         return "index";
     }
 }

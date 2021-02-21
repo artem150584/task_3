@@ -4,6 +4,7 @@ import com.example.MyBookShopApp.data.Author;
 import com.example.MyBookShopApp.data.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
@@ -26,7 +27,8 @@ public class AuthorController {
     }
 
     @GetMapping("/authors")
-    public String authorsPage() {
+    public String authorsPage(Model model) {
+        model.addAttribute("authorsActive", "true");
         return "authors/index";
     }
 }
