@@ -1,8 +1,9 @@
 package com.example.MyBookShopApp.data;
 
+
 import javax.persistence.*;
 
-@Entity
+//@Entity // TODO why need to comment?
 @Table(name = "authors")
 public class Author {
 

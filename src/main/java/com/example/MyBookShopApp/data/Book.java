@@ -2,7 +2,7 @@ package com.example.MyBookShopApp.data;
 
 import javax.persistence.*;
 
-@Entity
+//@Entity // TODO why need to comment?
 @Table(name = "books")
 public class Book {
 
@@ -11,7 +11,7 @@ public class Book {
     private Integer id;
     private String author;
     private String title;
-    private String price_old;
+    private String priceOld;
     private String price;
 
     public Integer getId() {
@@ -38,12 +38,12 @@ public class Book {
         this.title = title;
     }
 
-    public String getPrice_old() {
-        return price_old;
+    public String getPriceOld() {
+        return priceOld;
     }
 
-    public void setPrice_old(String price_old) {
-        this.price_old = price_old;
+    public void setPriceOld(String price_old) {
+        this.priceOld = price_old;
     }
 
     public String getPrice() {
