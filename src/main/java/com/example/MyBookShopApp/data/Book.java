@@ -2,7 +2,7 @@ package com.example.MyBookShopApp.data;
 
 import javax.persistence.*;
 
-//@Entity // TODO why need to comment?
+@Entity // TODO why need to remove comment?
 @Table(name = "books")
 public class Book {
 
